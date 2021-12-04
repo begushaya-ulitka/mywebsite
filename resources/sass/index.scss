@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url('../fonts/Roboto/Roboto-Thin.ttf');
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url('../fonts/Roboto/Roboto-Medium.ttf');
+}
+
+$nightrider: #333;
+
+.wrapper {
+    overflow: hidden;
+}
+
+.accords {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.accordItem {
+    width: 100%;
+    min-height: 80px;
+    max-height: 80px;
+    padding: 15px 20px;
+    border: 1px solid $nightrider;
+    max-width: 980px;
+    color: $nightrider;
+    font-family: "Roboto";
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    &__headline {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__button {
+        margin-right: 20px;
+        font-size: 42px;
+        font-weight: 500;
+        transform-origin: center;
+        user-select: none;
+    }
+    &__label {
+        align-self: center;
+        font-size: 16px;
+        line-height: 20px;
+        user-select: none;
+    }
+    &__content {
+        margin-top: 20px;
+    }
+    &__text {
+        user-select: none;
+    }
+    & + & {
+        margin-top: 10px;
+    }
+    &.active {
+        max-height: 9999px;
+        .accordItem {
+            &__button {
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
