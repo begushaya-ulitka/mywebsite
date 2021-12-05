@@ -14,6 +14,28 @@
   overflow: hidden;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #d18222;
+}
+.header__title {
+  color: #fff;
+  font-family: "Roboto-Thin";
+  font-size: 24px;
+}
+.header__link {
+  color: #fff;
+  font-family: "Roboto-Thin";
+  font-size: 20px;
+  text-decoration: none;
+}
+.header__link:hover {
+  color: #333;
+}
+
 .accords {
   display: flex;
   justify-content: center;
@@ -35,6 +57,7 @@
   overflow: hidden;
   cursor: pointer;
   background-color: azure;
+  transition: max-height 1s ease;
 }
 .accordItem__headline {
   display: flex;
@@ -49,6 +72,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  transition: transform 0.3s ease;
 }
 .accordItem__label {
   align-self: center;
@@ -72,8 +96,10 @@
   margin-top: 10px;
 }
 .accordItem.active {
+  transition: max-height 3s ease;
   max-height: 9999px;
 }
 .accordItem.active .accordItem__button {
+  transition: transform 0.3s ease;
   transform: rotate(45deg);
 }

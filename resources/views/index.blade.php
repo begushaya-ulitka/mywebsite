@@ -10,6 +10,15 @@
 </head>
 <body>  
     <div class="wrapper">
+        <header class="header">
+            <div class="header__title">
+                <a class="header__link" href="/">Щука-сайт</a>
+            </div>
+            <div class="header__auth">
+                <a class="header__link js-signin-link" href="">Войти</a>
+                <a class="header__link js-signup-link" href="">Зарегистрироваться</a>
+            </div>
+        </header>
         <main>
             <section class="accords">
                 <!-- accordItem -->
@@ -41,6 +50,7 @@
                 <!-- /accordItem -->
             </section>
         </main>
+        <footer class="footer"></footer>
     </div>
     <script src="{{ URL::asset('js/app.js') }}"></script>
 </body>

@@ -12,9 +12,32 @@
 }
 
 $nightrider: #333;
+$white: #fff;
 
 .wrapper {
     overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: rgb(209, 130, 34);
+    &__title {
+        color: $white;
+        font-family: 'Roboto-Thin';
+        font-size: 24px;
+    }
+    &__link {
+        color: $white;
+        font-family: 'Roboto-Thin';
+        font-size: 20px;
+        text-decoration: none;
+        &:hover {
+            color: $nightrider;
+        }
+    }
 }
 
 .accords {
@@ -38,6 +61,7 @@ $nightrider: #333;
     overflow: hidden;
     cursor: pointer;
     background-color: azure;
+    transition: max-height 1s ease;
     &__headline {
         display: flex;
         align-items: flex-start;
@@ -48,6 +72,7 @@ $nightrider: #333;
         font-weight: 500;
         transform-origin: center;
         user-select: none;
+        transition: transform .3s ease;
     }
     &__label {
         align-self: center;
@@ -65,9 +90,11 @@ $nightrider: #333;
         margin-top: 10px;
     }
     &.active {
+        transition: max-height 3s ease;
         max-height: 9999px;
         .accordItem {
             &__button {
+                transition: transform .3s ease;
                 transform: rotate(45deg);
             }
         }
