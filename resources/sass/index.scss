@@ -13,6 +13,7 @@
 
 $nightrider: #333;
 $white: #fff;
+$purple: rgb(79, 28, 160);
 
 .wrapper {
     overflow: hidden;
@@ -96,6 +97,66 @@ $white: #fff;
             &__button {
                 transition: transform .3s ease;
                 transform: rotate(45deg);
+            }
+        }
+    }
+}
+
+.loginForm {
+    width: 100%;
+    max-width: 460px;
+    padding: 15px 20px;
+    border: 1px solid $nightrider;
+    background-color: $white;
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 40px 15px;
+    }
+    &__title {
+        color: $nightrider;
+        font-family: 'Roboto-Thin';
+        font-size: 20px;
+    }
+    &__fields {
+        margin-top: 20px;
+    }
+    &__field {
+        width: 100%;
+        height: 40px;
+        & + & {
+            margin-top: 15px;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: 1px solid $nightrider;
+        padding: 5px 20px;
+    }
+    &__submit {
+        margin-top: 20px;
+        outline: none;
+        width: 100%;
+        height: 50px;
+        background-color: $purple;
+        color: $white;
+        font-size: 20px;
+        font-family: 'Roboto';
+        border: 0;
+        cursor: pointer;
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            transition: transform 2s;
+            &:hover {
+                transform: rotate(360deg);
             }
         }
     }

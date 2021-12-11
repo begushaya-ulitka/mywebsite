@@ -103,3 +103,63 @@
   transition: transform 0.3s ease;
   transform: rotate(45deg);
 }
+
+.loginForm {
+  width: 100%;
+  max-width: 460px;
+  padding: 15px 20px;
+  border: 1px solid #333;
+  background-color: #fff;
+}
+.loginForm__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 15px;
+}
+.loginForm__title {
+  color: #333;
+  font-family: "Roboto-Thin";
+  font-size: 20px;
+}
+.loginForm__fields {
+  margin-top: 20px;
+}
+.loginForm__field {
+  width: 100%;
+  height: 40px;
+}
+.loginForm__field + .loginForm__field {
+  margin-top: 15px;
+}
+.loginForm__input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid #333;
+  padding: 5px 20px;
+}
+.loginForm__submit {
+  margin-top: 20px;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  background-color: #4f1ca0;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Roboto";
+  border: 0;
+  cursor: pointer;
+}
+.loginForm__submit span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 2s;
+}
+.loginForm__submit span:hover {
+  transform: rotate(360deg);
+}
