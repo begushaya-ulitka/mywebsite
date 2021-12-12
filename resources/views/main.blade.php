@@ -37,5 +37,6 @@
 		<footer class="footer"></footer>
 	</div>
 	<script src="{{ URL::asset('js/app.js') }}"></script>
+	@yield('scripts')
 </body>
 </html>

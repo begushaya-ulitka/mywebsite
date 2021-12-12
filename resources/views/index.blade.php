@@ -45,3 +45,7 @@
     <!-- /accordItem -->
 </section>
 @stop
+
+@section('scripts')
+    <script src="{{ URL::asset('js/index.js') }}"></script>
+@stop
