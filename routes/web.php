@@ -16,6 +16,10 @@ Route::get('/signin', ['as' => 'signin.form', function () {
 	return view('signin');
 }]);
 
+Route::get('/chat', ['as' => 'chat.form', function() {
+	return view('chat');
+}]);
+
 Route::post('/signup', [RegisterController::class, 'save'])->name('signup');
 Route::post('/signin', [LoginController::class, 'postLogin'])->name('signin');
 Route::get('/logout', [LoginController::class, 'getLogout'])->name('logout');

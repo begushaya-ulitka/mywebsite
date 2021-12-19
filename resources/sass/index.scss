@@ -41,12 +41,21 @@ $purple: rgb(79, 28, 160);
     }
 }
 
+.container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section {
+    padding: 20px 0;
+}
+
 .accords {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px 0;
 }
 
 .accordItem {
@@ -166,5 +175,69 @@ $purple: rgb(79, 28, 160);
         font-family: 'Roboto';
         font-size: 22px;
         margin-top: 20px;
+    }
+}
+
+.chatPanel {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    &__text {
+        font-family: 'Roboto-Thin';
+        font-size: 24px;
+    }
+    &__link {
+        color: deepskyblue;
+        text-decoration: none;
+        transition: color 1s;
+        &:hover {
+            color: $nightrider;
+            transition: color 1s;
+        }
+    }
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &Area {
+        border: 1px solid $nightrider;
+        min-height: 350px;
+        max-height: 350px;
+        overflow-x: hidden;
+    }
+    &Form {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__input {
+            width: 100%;
+            padding: 8px 15px;
+            min-height: 45px;
+            color: $nightrider;
+            font-family: 'Roboto';
+            font-size: 20px;
+            outline: none;
+            border: 0;
+            border-bottom: 1px solid $nightrider;
+            margin-right: 20px;
+            cursor: pointer;
+            &:focus {
+                border-bottom-color: deepskyblue;
+            }
+        }
+        &__button {
+            min-width: 200px;
+            min-height: 45px;
+            background-color: deepskyblue;
+            color: $white;
+            font-family: 'Roboto-Thin';
+            font-size: 20px;
+            outline: none;
+            border: 0;
+            cursor: pointer;
+        }
     }
 }

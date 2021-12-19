@@ -36,12 +36,21 @@
   color: #333;
 }
 
+.container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section {
+  padding: 20px 0;
+}
+
 .accords {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 40px 0;
 }
 
 .accordItem {
@@ -169,4 +178,68 @@
   font-family: "Roboto";
   font-size: 22px;
   margin-top: 20px;
+}
+
+.chatPanel {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.chatPanel__text {
+  font-family: "Roboto-Thin";
+  font-size: 24px;
+}
+.chatPanel__link {
+  color: deepskyblue;
+  text-decoration: none;
+  transition: color 1s;
+}
+.chatPanel__link:hover {
+  color: #333;
+  transition: color 1s;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.chatArea {
+  border: 1px solid #333;
+  min-height: 350px;
+  max-height: 350px;
+  overflow-x: hidden;
+}
+.chatForm {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatForm__input {
+  width: 100%;
+  padding: 8px 15px;
+  min-height: 45px;
+  color: #333;
+  font-family: "Roboto";
+  font-size: 20px;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #333;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.chatForm__input:focus {
+  border-bottom-color: deepskyblue;
+}
+.chatForm__button {
+  min-width: 200px;
+  min-height: 45px;
+  background-color: deepskyblue;
+  color: #fff;
+  font-family: "Roboto-Thin";
+  font-size: 20px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
 }
