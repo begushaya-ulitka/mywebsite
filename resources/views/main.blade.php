@@ -16,16 +16,16 @@
 			</div>
 			<div class="header__auth">
 				@if (Auth::check())
-					<a class="header__link js-signin-link" href="">Выйти</a>
+					<a class="header__link js-signin-link" href="{{ URL::route('logout') }}">Выйти</a>
 				@else
 					<a 
 						class="header__link js-signin-link" 
-						href="{{ route('signin') }}">
+						href="{{ route('signin.form') }}">
 						Войти
 					</a>
 					<a 
 						class="header__link js-signup-link" 
-						href="{{ route('signup') }}">
+						href="{{ route('signup.form') }}">
 						Зарегистрироваться
 					</a>
 				@endif

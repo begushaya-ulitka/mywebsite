@@ -11,20 +11,39 @@
 <body>  
 	<div class="wrapper">
 		<div class="loginForm__wrapper">
-			<form class="loginForm">
+			<form class="loginForm" method="post" action="{{ URL::route('signup') }}">
+				@csrf
 				<div class="loginForm__title">Зарегистироваться</div>
 				<div class="loginForm__fields">
 					<div class="loginForm__field">
-						<input class="loginForm__input" type="email" placeholder="Email">
+						<input 
+							class="loginForm__input" 
+							type="text"
+							name="name"
+							placeholder="Name">
 					</div>
 					<div class="loginForm__field">
-						<input class="loginForm__input" type="password" placeholder="Password">
+						<input 
+							class="loginForm__input js-input-email" 
+							type="email" 
+							name="email"
+							placeholder="Email">
+					</div>
+					<div class="loginForm__field">
+						<input 
+							class="loginForm__input js-input-password" 
+							type="password"
+							name="password"
+							placeholder="Password">
 					</div>
 				</div>
-				<button class="loginForm__submit" type="submit">
+				<button class="loginForm__submit js-submit-btn" type="submit" data-url="{{URL::route('signup')}}">
 					<span>Создать!</span>
 				</button>
 			</form>
+			@foreach ($errors->all() as $error)
+			<div class="loginForm__error">{{ $error }}</div>
+			@endforeach
 		</div>
 	</div>
 	<script src="{{ URL::asset('js/signup.js') }}"></script>

@@ -115,6 +115,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   padding: 40px 15px;
 }
@@ -162,4 +163,10 @@
 }
 .loginForm__submit span:hover {
   transform: rotate(360deg);
+}
+.loginForm__error {
+  color: darkred;
+  font-family: "Roboto";
+  font-size: 22px;
+  margin-top: 20px;
 }
