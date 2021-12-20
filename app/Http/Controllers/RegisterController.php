@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\UserRoles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -21,6 +22,11 @@ class RegisterController
             "name" => $request->name,
         ]);
         $user->save();
+        $role = new UserRoles([
+            "user_id" => $user->id,
+            "role_id" => 1,
+        ]);
+        $role->save();
         Auth::login($user);
         return redirect(route('index'));
     }

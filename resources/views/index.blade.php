@@ -45,12 +45,14 @@
         </div>
         <!-- /accordItem -->
     </div>
+    @if (Auth::check())
     <div class="chatPanel">
         <span class="chatPanel__text">
             Не нашли ответ на свой вопрос?
             <a class="chatPanel__link" href="{{ URL::route('chat.form') }}">Перейти в чат</a>
         </span>
     </div>
+    @endif
 </section>
 @stop
 
