@@ -243,3 +243,24 @@ $purple: rgb(79, 28, 160);
         }
     }
 }
+
+.page404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    &__title {
+        color: darkred;
+        font-size: 78px;
+        font-family: 'Roboto-Thin';
+        text-align: center;
+    }
+    &__text {
+        color: $nightrider;
+        font-size: 30px;
+        font-family: 'Roboto';
+        text-align: center;
+        margin-top: 20px;
+    }
+}

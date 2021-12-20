@@ -245,3 +245,24 @@
   border: 0;
   cursor: pointer;
 }
+
+.page404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.page404__title {
+  color: darkred;
+  font-size: 78px;
+  font-family: "Roboto-Thin";
+  text-align: center;
+}
+.page404__text {
+  color: #333;
+  font-size: 30px;
+  font-family: "Roboto";
+  text-align: center;
+  margin-top: 20px;
+}
