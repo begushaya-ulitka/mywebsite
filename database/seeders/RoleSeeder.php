@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\Role;
+use App\Constants\Roles;
 
 class RoleSeeder extends Seeder
 {
@@ -16,9 +16,9 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $roles = [
-            ['name' => 'USER'],
-            ['name' => 'OPERATOR'],
-            ['name' => 'ADMIN'],
+            ['id' => 1, 'name' => Roles::$USER_ROLE],
+            ['id' => 2, 'name' => Roles::$OPERATOR_ROLE],
+            ['id' => 3, 'name' => Roles::$ADMIN_ROLE],
         ];
         DB::table('roles')->insert($roles);
     }
