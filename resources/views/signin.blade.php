@@ -31,6 +31,5 @@
 			@endforeach
 		</div>
 	</div>
-	<script src="{{ URL::asset('js/signin.js') }}"></script>
 </body>
 </html>

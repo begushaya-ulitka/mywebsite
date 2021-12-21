@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Chat;
 use App\Models\UserRoles;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +27,11 @@ class RegisterController
             "user_id" => $user->id,
             "role_id" => 1,
         ]);
+        $chat = new Chat([
+            "user_id" => $user->id,
+        ]);
         $role->save();
+        $chat->save();
         Auth::login($user);
         return redirect(route('index'));
     }

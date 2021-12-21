@@ -210,10 +210,31 @@ $purple: rgb(79, 28, 160);
     flex-direction: column;
     justify-content: center;
     &Area {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
         border: 1px solid $nightrider;
         min-height: 350px;
         max-height: 350px;
         overflow-x: hidden;
+    }
+    &Message {
+        padding: 20px;
+        max-width: 50%;
+        align-self: start;
+        white-space: normal;
+        border-radius: 8px;
+        background-color: lightblue;
+        color: $nightrider;
+        font-family: 'Roboto';
+        font-size: 20px;
+        &.user {
+            background-color: lightgreen;
+            align-self: end;
+        }
+        & + & {
+            margin-top: 10px;
+        }
     }
     &Form {
         margin-top: 20px;
@@ -246,6 +267,10 @@ $purple: rgb(79, 28, 160);
             outline: none;
             border: 0;
             cursor: pointer;
+            &:disabled {
+                background-color: gray;
+                cursor: not-allowed;
+            }
         }
     }
 }

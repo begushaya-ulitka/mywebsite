@@ -46,6 +46,5 @@
 			@endforeach
 		</div>
 	</div>
-	<script src="{{ URL::asset('js/signup.js') }}"></script>
 </body>
 </html>

@@ -213,10 +213,31 @@
   justify-content: center;
 }
 .chatArea {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   border: 1px solid #333;
   min-height: 350px;
   max-height: 350px;
   overflow-x: hidden;
+}
+.chatMessage {
+  padding: 20px;
+  max-width: 50%;
+  align-self: start;
+  white-space: normal;
+  border-radius: 8px;
+  background-color: lightblue;
+  color: #333;
+  font-family: "Roboto";
+  font-size: 20px;
+}
+.chatMessage.user {
+  background-color: lightgreen;
+  align-self: end;
+}
+.chatMessage + .chatMessage {
+  margin-top: 10px;
 }
 .chatForm {
   margin-top: 20px;
@@ -250,6 +271,10 @@
   outline: none;
   border: 0;
   cursor: pointer;
+}
+.chatForm__button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
 }
 
 .page404 {
