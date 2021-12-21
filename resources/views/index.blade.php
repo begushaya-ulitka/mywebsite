@@ -45,7 +45,7 @@
         </div>
         <!-- /accordItem -->
     </div>
-    @if (Auth::check())
+    @if (Auth::check() && $role === 'USER')
     <div class="chatPanel">
         <span class="chatPanel__text">
             Не нашли ответ на свой вопрос?
