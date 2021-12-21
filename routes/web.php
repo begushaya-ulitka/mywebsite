@@ -26,3 +26,4 @@ Route::post('/signin', [LoginController::class, 'postLogin'])->name('signin');
 Route::get('/logout', [LoginController::class, 'getLogout'])->name('logout');
 
 Route::get('/admin-form', [UserController::class, 'showAdminForm'])->name('admin.form');
+Route::post('/create-operator', [UserController::class, 'createOperator'])->name('create-operator');

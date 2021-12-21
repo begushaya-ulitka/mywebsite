@@ -180,6 +180,12 @@
   font-size: 22px;
   margin-top: 20px;
 }
+.loginForm__success {
+  color: green;
+  font-family: "Roboto";
+  font-size: 22px;
+  margin-top: 20px;
+}
 
 .chatPanel {
   display: flex;

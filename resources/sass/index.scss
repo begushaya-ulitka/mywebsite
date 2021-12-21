@@ -177,6 +177,12 @@ $purple: rgb(79, 28, 160);
         font-size: 22px;
         margin-top: 20px;
     }
+    &__success {
+        color: green;
+        font-family: 'Roboto';
+        font-size: 22px;
+        margin-top: 20px;
+    }
 }
 
 .chatPanel {
