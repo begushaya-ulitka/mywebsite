@@ -53,6 +53,14 @@
         </span>
     </div>
     @endif
+    @if (Auth::check() && $role === 'ADMIN')
+    <div class="chatPanel">
+        <span class="chatPanel__text">
+            Товарищ админ, не хотите ли
+            <a class="chatPanel__link" href="{{ URL::route('admin.form') }}">добавить оператора</a>
+        </span>
+    </div>
+    @endif
 </section>
 @stop
 
