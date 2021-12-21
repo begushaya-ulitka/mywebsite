@@ -5,9 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', ['as' => 'index', function () {
-	return view('index');
-}]);
+Route::get('/', [IndexController::class, 'showIndex'])->name('index');
 
 Route::get('/signup', ['as' => 'signup.form', function () {
 	return view('signup');
