@@ -4,11 +4,13 @@
 <section class="section">
     <div class="chat">
         <div class="chatArea">
-        @if(count($messages) > 0)
-        @foreach($messages as $message)
-        <div class="chatMessage user">{{$message->text}}</div>
-        @endforeach
-        @endif
+            @if(count($messages) > 0)
+            @foreach($messages as $message)
+            <div class="chatMessage @if($message->user_id === Auth::id()) user @endif">
+                {{$message->text}}
+            </div>
+            @endforeach
+            @endif
         </div>
         <form class="chatForm" method="post" action="{{ URL::route('send-message') }}">
             @csrf
