@@ -15,8 +15,18 @@ $nightrider: #333;
 $white: #fff;
 $purple: rgb(79, 28, 160);
 
+$header-height: 60px;
+$footer-height: 64px;
+
 .wrapper {
     overflow: hidden;
+}
+
+main {
+    height: calc(100vh - $header-height - $footer-height);
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .header {
@@ -24,7 +34,8 @@ $purple: rgb(79, 28, 160);
     align-items: center;
     justify-content: space-between;
     padding: 15px 20px;
-    background-color: rgb(209, 130, 34);
+    background-color: $purple;
+    min-height: $header-height;
     &__title {
         color: $white;
         font-family: 'Roboto-Thin';
@@ -34,10 +45,28 @@ $purple: rgb(79, 28, 160);
         color: $white;
         font-family: 'Roboto-Thin';
         font-size: 20px;
+        margin-left: 10px;
         text-decoration: none;
         &:hover {
-            color: $nightrider;
+            font-style: italic;
         }
+    }
+}
+
+.footer {
+    width: 100%;
+    min-height: $footer-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: $purple;
+    position: absolute;
+    bottom: 0;
+    &__text {
+        color: $white;
+        font-family: 'Roboto-Thin';
+        font-size: 20px;
     }
 }
 
@@ -65,14 +94,15 @@ $purple: rgb(79, 28, 160);
     min-height: 80px;
     max-height: 80px;
     padding: 15px 20px;
-    border: 1px solid $nightrider;
-    color: $nightrider;
+    color: $purple;
     font-family: "Roboto";
+    font-size: 24px;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    background-color: azure;
-    transition: max-height 1s ease;
+    background-color: rgb(179, 231, 247);
+    transition: max-height 1s ease, background-color 1s, color 1s;
+    box-shadow: 0 6px 10px rgb(0 0 0 / 20%);
     &__headline {
         display: flex;
         align-items: flex-start;
@@ -96,9 +126,10 @@ $purple: rgb(79, 28, 160);
     }
     &__text {
         user-select: none;
+        font-size: 20px;
     }
     & + & {
-        margin-top: 10px;
+        margin-top: 20px;
     }
     &.active {
         transition: max-height 3s ease;
@@ -109,6 +140,11 @@ $purple: rgb(79, 28, 160);
                 transform: rotate(45deg);
             }
         }
+    }
+    &:hover {
+        transition: background-color 1s, color 1s;
+        background-color: lightseagreen;
+        color: $white;
     }
 }
 

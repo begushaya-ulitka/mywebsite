@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Сайт поддержки</title>
 	<link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 	<link rel="stylesheet" href="{{ URL::asset('css/index.css') }}">
 </head>
@@ -12,7 +12,7 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__title">
-				<a class="header__link" href="/">Щука-сайт</a>
+				<a class="header__link" href="/">Сайт поддержки</a>
 			</div>
 			<div class="header__auth">
 				@if (Auth::check())
@@ -36,7 +36,11 @@
 				@yield('content')
 			</div>
 		</main>
-		<footer class="footer"></footer>
+		<footer class="footer">
+			<div class="footer__text">
+				Программная Инжерения. 2021. Декабрь. Тут могла быть ваша реклама.
+			</div>
+		</footer>
 	</div>
 	<script src="{{ URL::asset('js/app.js') }}"></script>
 	@yield('scripts')

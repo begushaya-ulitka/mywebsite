@@ -14,12 +14,20 @@
   overflow: hidden;
 }
 
+main {
+  height: calc(100vh - 60px - 64px);
+  background-image: url(/images/background.jpg?446daa008a9577fad7518329ec4e383d);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  background-color: #d18222;
+  background-color: #4f1ca0;
+  min-height: 60px;
 }
 .header__title {
   color: #fff;
@@ -30,10 +38,28 @@
   color: #fff;
   font-family: "Roboto-Thin";
   font-size: 20px;
+  margin-left: 10px;
   text-decoration: none;
 }
 .header__link:hover {
-  color: #333;
+  font-style: italic;
+}
+
+.footer {
+  width: 100%;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #4f1ca0;
+  position: absolute;
+  bottom: 0;
+}
+.footer__text {
+  color: #fff;
+  font-family: "Roboto-Thin";
+  font-size: 20px;
 }
 
 .container {
@@ -60,14 +86,15 @@
   min-height: 80px;
   max-height: 80px;
   padding: 15px 20px;
-  border: 1px solid #333;
-  color: #333;
+  color: #4f1ca0;
   font-family: "Roboto";
+  font-size: 24px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  background-color: azure;
-  transition: max-height 1s ease;
+  background-color: #b3e7f7;
+  transition: max-height 1s ease, background-color 1s, color 1s;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 .accordItem__headline {
   display: flex;
@@ -101,9 +128,10 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-size: 20px;
 }
 .accordItem + .accordItem {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .accordItem.active {
   transition: max-height 3s ease;
@@ -112,6 +140,11 @@
 .accordItem.active .accordItem__button {
   transition: transform 0.3s ease;
   transform: rotate(45deg);
+}
+.accordItem:hover {
+  transition: background-color 1s, color 1s;
+  background-color: lightseagreen;
+  color: #fff;
 }
 
 .loginForm {

@@ -7,11 +7,11 @@
         <div class="accordItem js-accordItem">
             <div class="accordItem__headline">
                 <div class="accordItem__button">+</div>
-                <div class="accordItem__label">Щука-аккордеон</div>
+                <div class="accordItem__label">Тут что-то интересное, нажми на меня!</div>
             </div>
             <div class="accordItem__content">
                 <div class="accordItem__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, dolor hic non delectus laudantium consequuntur ut necessitatibus earum quas sint?
+                    А вот и не угадал!
                 </div>
             </div>
         </div>
@@ -21,11 +21,11 @@
         <div class="accordItem js-accordItem">
             <div class="accordItem__headline">
                 <div class="accordItem__button">+</div>
-                <div class="accordItem__label">Щука-аккордеон 2</div>
+                <div class="accordItem__label">Это сайт поддержки</div>
             </div>
             <div class="accordItem__content">
                 <div class="accordItem__text">
-                    Это текст
+                    Создан в рамках курсовой работы по предмету "Программная Инженерия"
                 </div>
             </div>
         </div>
@@ -35,11 +35,41 @@
         <div class="accordItem js-accordItem">
             <div class="accordItem__headline">
                 <div class="accordItem__button">+</div>
-                <div class="accordItem__label">Щука-аккордеон 3</div>
+                <div class="accordItem__label">Выпадающее меню</div>
             </div>
             <div class="accordItem__content">
                 <div class="accordItem__text">
-                    Это текст
+                    Две столовой ложки муки, три чайные ложки зверобоя, корень имбиря, 1 лимон, 2 яйца
+                </div>
+            </div>
+        </div>
+        <!-- /accordItem -->
+
+        <!-- accordItem -->
+        <div class="accordItem js-accordItem">
+            <div class="accordItem__headline">
+                <div class="accordItem__button">+</div>
+                <div class="accordItem__label">Выпадающее меню два</div>
+            </div>
+            <div class="accordItem__content">
+                <div class="accordItem__text">
+                    Раз-два-три, елочка гори! Сектор приз на барабане
+                </div>
+            </div>
+        </div>
+        <!-- /accordItem -->
+
+        <!-- accordItem -->
+        <div class="accordItem js-accordItem">
+            <div class="accordItem__headline">
+                <div class="accordItem__button">+</div>
+                <div class="accordItem__label">Выпадающее меню ква</div>
+            </div>
+            <div class="accordItem__content">
+                <div class="accordItem__text">
+                    Вообще, сложно сказать, какой текст можно сюда написать. 
+                    Но какой-то текст сюда написать, конечно, можно. 
+                    Но стоит вопрос о качестве данного текста.
                 </div>
             </div>
         </div>
