@@ -17,7 +17,5 @@ mix.js('resources/js/app.js', 'public/js')
     ]);
 
 mix.js('resources/js/index.js', 'public/js');
-mix.js('resources/js/signup.js', 'public/js');
-mix.js('resources/js/signin.js', 'public/js');
 
 mix.sass('resources/sass/index.scss', 'public/css');

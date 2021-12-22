@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  background-color: #d18222;
+  background-color: #4f1ca0;
 }
 .header__title {
   color: #fff;
@@ -29,11 +29,12 @@
 .header__link {
   color: #fff;
   font-family: "Roboto-Thin";
-  font-size: 20px;
+  font-size: 24px;
+  margin-left: 10px;
   text-decoration: none;
 }
 .header__link:hover {
-  color: #333;
+  font-style: italic;
 }
 
 .container {
@@ -60,14 +61,15 @@
   min-height: 80px;
   max-height: 80px;
   padding: 15px 20px;
-  border: 1px solid #333;
-  color: #333;
+  color: #4f1ca0;
   font-family: "Roboto";
+  font-size: 24px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  background-color: azure;
+  background-color: #b3e7f7;
   transition: max-height 1s ease;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 .accordItem__headline {
   display: flex;
@@ -101,9 +103,10 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-size: 20px;
 }
 .accordItem + .accordItem {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .accordItem.active {
   transition: max-height 3s ease;
