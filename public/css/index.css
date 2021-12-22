@@ -14,12 +14,20 @@
   overflow: hidden;
 }
 
+main {
+  height: calc(100vh - 60px - 64px);
+  background-image: url(/images/background.jpg?446daa008a9577fad7518329ec4e383d);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
   background-color: #4f1ca0;
+  min-height: 60px;
 }
 .header__title {
   color: #fff;
@@ -39,6 +47,7 @@
 
 .footer {
   width: 100%;
+  min-height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;

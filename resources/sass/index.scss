@@ -15,8 +15,18 @@ $nightrider: #333;
 $white: #fff;
 $purple: rgb(79, 28, 160);
 
+$header-height: 60px;
+$footer-height: 64px;
+
 .wrapper {
     overflow: hidden;
+}
+
+main {
+    height: calc(100vh - $header-height - $footer-height);
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .header {
@@ -25,6 +35,7 @@ $purple: rgb(79, 28, 160);
     justify-content: space-between;
     padding: 15px 20px;
     background-color: $purple;
+    min-height: $header-height;
     &__title {
         color: $white;
         font-family: 'Roboto-Thin';
@@ -44,6 +55,7 @@ $purple: rgb(79, 28, 160);
 
 .footer {
     width: 100%;
+    min-height: $footer-height;
     display: flex;
     align-items: center;
     justify-content: center;
