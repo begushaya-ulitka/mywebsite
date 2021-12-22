@@ -101,7 +101,7 @@ main {
     overflow: hidden;
     cursor: pointer;
     background-color: rgb(179, 231, 247);
-    transition: max-height 1s ease;
+    transition: max-height 1s ease, background-color 1s, color 1s;
     box-shadow: 0 6px 10px rgb(0 0 0 / 20%);
     &__headline {
         display: flex;
@@ -140,6 +140,11 @@ main {
                 transform: rotate(45deg);
             }
         }
+    }
+    &:hover {
+        transition: background-color 1s, color 1s;
+        background-color: lightseagreen;
+        color: $white;
     }
 }
 

@@ -93,7 +93,7 @@ main {
   overflow: hidden;
   cursor: pointer;
   background-color: #b3e7f7;
-  transition: max-height 1s ease;
+  transition: max-height 1s ease, background-color 1s, color 1s;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 .accordItem__headline {
@@ -140,6 +140,11 @@ main {
 .accordItem.active .accordItem__button {
   transition: transform 0.3s ease;
   transform: rotate(45deg);
+}
+.accordItem:hover {
+  transition: background-color 1s, color 1s;
+  background-color: lightseagreen;
+  color: #fff;
 }
 
 .loginForm {
