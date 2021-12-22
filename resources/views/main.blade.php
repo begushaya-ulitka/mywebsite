@@ -36,7 +36,11 @@
 				@yield('content')
 			</div>
 		</main>
-		<footer class="footer"></footer>
+		<footer class="footer">
+			<div class="footer__text">
+				Программная Инжерения. 2021. Декабрь. Тут могла быть ваша реклама.
+			</div>
+		</footer>
 	</div>
 	<script src="{{ URL::asset('js/app.js') }}"></script>
 	@yield('scripts')
