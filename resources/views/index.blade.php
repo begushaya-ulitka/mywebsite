@@ -44,6 +44,36 @@
             </div>
         </div>
         <!-- /accordItem -->
+
+        <!-- accordItem -->
+        <div class="accordItem js-accordItem">
+            <div class="accordItem__headline">
+                <div class="accordItem__button">+</div>
+                <div class="accordItem__label">Выпадающее меню два</div>
+            </div>
+            <div class="accordItem__content">
+                <div class="accordItem__text">
+                    Раз-два-три, елочка гори! Сектор приз на барабане
+                </div>
+            </div>
+        </div>
+        <!-- /accordItem -->
+
+        <!-- accordItem -->
+        <div class="accordItem js-accordItem">
+            <div class="accordItem__headline">
+                <div class="accordItem__button">+</div>
+                <div class="accordItem__label">Выпадающее меню ква</div>
+            </div>
+            <div class="accordItem__content">
+                <div class="accordItem__text">
+                    Вообще, сложно сказать, какой текст можно сюда написать. 
+                    Но какой-то текст сюда написать, конечно, можно. 
+                    Но стоит вопрос о качестве данного текста.
+                </div>
+            </div>
+        </div>
+        <!-- /accordItem -->
     </div>
     @if (Auth::check() && $role === 'USER')
     <div class="chatPanel">
