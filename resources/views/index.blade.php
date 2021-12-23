@@ -5,10 +5,11 @@
     <div class="accords">
         @if(count($helpers) > 0)
         @foreach($helpers as $helper)
-        <div class="accordItem js-accordItem">
+        <div class="accordItem js-accordItem" data-id="{{ $helper->id }}">
             <div class="accordItem__headline">
                 <div class="accordItem__button">+</div>
                 <div class="accordItem__label">{{ $helper->title }}</div>
+                <div class="accordItem__remove js-accordItem-remove">✕</div>
             </div>
             <div class="accordItem__content">
                 <div class="accordItem__text">

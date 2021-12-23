@@ -130,6 +130,27 @@ main {
           user-select: none;
   font-size: 20px;
 }
+.accordItem__remove {
+  font-size: 30px;
+  transform-origin: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
+  min-width: 45px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+}
+.accordItem__remove:hover {
+  transition: background-color 1s, color 1s;
+  background-color: #fff;
+  color: lightseagreen;
+}
 .accordItem + .accordItem {
   margin-top: 20px;
 }

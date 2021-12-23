@@ -8,6 +8,7 @@ use App\Models\UserRoles;
 use App\Models\Role;
 use App\Models\Helper;
 use App\Constants\Roles;
+use Illuminate\Http\JsonResponse;
 
 class IndexController extends Controller
 {
@@ -29,5 +30,12 @@ class IndexController extends Controller
         ]);
         $helper->save();
         return redirect()->back();
+    }
+
+    public function removeItem(Request $request) {
+        $result = Helper::where('id', $request->get('id'))->delete();
+        return new JsonResponse([
+            'success' => $result
+        ]);
     }
 }
