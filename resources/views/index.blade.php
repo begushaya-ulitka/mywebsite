@@ -74,6 +74,19 @@
             </div>
         </div>
         <!-- /accordItem -->
+
+        @if (Auth::check() && $role === 'ADMIN')
+        <form class="addItemForm" method="post" action="">
+            @csrf
+            <div class="addItemForm__fields">
+                <input class="addItemForm__input" name="title" type="text" placeholder="Заголовок">
+                <input class="addItemForm__input" name="text" type="text" placeholder="Текст">
+            </div>
+            <button class="addItemForm__submit" type="submit">
+                <span>Добавить</span>
+            </button>
+        </form>
+        @endif
     </div>
     @if (Auth::check() && $role === 'USER')
     <div class="chatPanel">
