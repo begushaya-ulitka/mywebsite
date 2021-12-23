@@ -92,7 +92,7 @@ main {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  background-color: #b3e7f7;
+  background-color: #caaafc;
   transition: max-height 1s ease, background-color 1s, color 1s;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
@@ -241,22 +241,25 @@ main {
   margin-top: 20px;
 }
 
-.chatPanel {
+.linkPanel {
   display: flex;
   justify-content: flex-end;
   max-width: 980px;
   margin: 20px auto 0;
+  background-color: #caaafc;
+  border-radius: 8px;
+  padding: 10px;
 }
-.chatPanel__text {
+.linkPanel__text {
   font-family: "Roboto-Thin";
   font-size: 24px;
 }
-.chatPanel__link {
-  color: deepskyblue;
+.linkPanel__link {
+  color: yellow;
   text-decoration: none;
   transition: color 1s;
 }
-.chatPanel__link:hover {
+.linkPanel__link:hover {
   color: #333;
   transition: color 1s;
 }
@@ -356,7 +359,8 @@ main {
   width: 100%;
   padding: 20px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  background-color: #b3e7f7;
+  background-color: #caaafc;
+  border-radius: 8px;
   display: flex;
   margin-top: 40px;
 }
@@ -388,6 +392,7 @@ main {
   outline: none;
   border: 1px solid #4f1ca0;
   background-color: #4f1ca0;
+  border-radius: 8px;
   color: #fff;
   font-family: "Roboto";
   font-size: 20px;

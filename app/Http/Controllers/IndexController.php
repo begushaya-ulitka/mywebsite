@@ -24,6 +24,9 @@ class IndexController extends Controller
     }
 
     public function addItem(Request $request) {
+        if (!$request->title || !$request->text) {
+            return redirect()->back();
+        }
         $helper = new Helper([
             'title' => $request->title,
             'text' => $request->text

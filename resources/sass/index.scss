@@ -14,6 +14,7 @@
 $nightrider: #333;
 $white: #fff;
 $purple: rgb(79, 28, 160);
+$item-color: rgb(202, 170, 252);
 
 $header-height: 60px;
 $footer-height: 64px;
@@ -100,7 +101,7 @@ main {
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    background-color: rgb(179, 231, 247);
+    background-color: $item-color;
     transition: max-height 1s ease, background-color 1s, color 1s;
     box-shadow: 0 6px 10px rgb(0 0 0 / 20%);
     &__headline {
@@ -239,17 +240,20 @@ main {
     }
 }
 
-.chatPanel {
+.linkPanel {
     display: flex;
     justify-content: flex-end;
     max-width: 980px;
     margin: 20px auto 0;
+    background-color: $item-color;
+    border-radius: 8px;
+    padding: 10px;
     &__text {
         font-family: 'Roboto-Thin';
         font-size: 24px;
     }
     &__link {
-        color: deepskyblue;
+        color: yellow;
         text-decoration: none;
         transition: color 1s;
         &:hover {
@@ -354,7 +358,8 @@ main {
     width: 100%;
     padding: 20px;
     box-shadow: 0 6px 10px rgb(0 0 0 / 20%);
-    background-color: rgb(179, 231, 247);
+    background-color: $item-color;
+    border-radius: 8px;
     display: flex;
     margin-top: 40px;
     &__fields {
@@ -385,6 +390,7 @@ main {
         outline: none;
         border: 1px solid $purple;
         background-color: $purple;
+        border-radius: 8px;
         color: $white;
         font-family: 'Roboto';
         font-size: 20px;
