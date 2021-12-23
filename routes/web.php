@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'showIndex'])->name('index');
+Route::post('/add-item', [IndexController::class, 'addItem'])->name('add-item');
 
 Route::get('/signup', ['as' => 'signup.form', function () {
 	return view('signup');
