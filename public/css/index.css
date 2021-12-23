@@ -92,7 +92,7 @@ main {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
-  background-color: #b3e7f7;
+  background-color: #caaafc;
   transition: max-height 1s ease, background-color 1s, color 1s;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
@@ -129,6 +129,27 @@ main {
       -ms-user-select: none;
           user-select: none;
   font-size: 20px;
+}
+.accordItem__remove {
+  font-size: 30px;
+  transform-origin: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: auto;
+  position: relative;
+  z-index: 10;
+  min-width: 45px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+}
+.accordItem__remove:hover {
+  transition: background-color 1s, color 1s;
+  background-color: #fff;
+  color: lightseagreen;
 }
 .accordItem + .accordItem {
   margin-top: 20px;
@@ -220,22 +241,25 @@ main {
   margin-top: 20px;
 }
 
-.chatPanel {
+.linkPanel {
   display: flex;
   justify-content: flex-end;
   max-width: 980px;
   margin: 20px auto 0;
+  background-color: #caaafc;
+  border-radius: 8px;
+  padding: 10px;
 }
-.chatPanel__text {
+.linkPanel__text {
   font-family: "Roboto-Thin";
   font-size: 24px;
 }
-.chatPanel__link {
-  color: deepskyblue;
+.linkPanel__link {
+  color: yellow;
   text-decoration: none;
   transition: color 1s;
 }
-.chatPanel__link:hover {
+.linkPanel__link:hover {
   color: #333;
   transition: color 1s;
 }
@@ -329,4 +353,48 @@ main {
   font-family: "Roboto";
   text-align: center;
   margin-top: 20px;
+}
+
+.addItemForm {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  background-color: #caaafc;
+  border-radius: 8px;
+  display: flex;
+  margin-top: 40px;
+}
+.addItemForm__fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.addItemForm__input {
+  width: 100%;
+  padding: 8px 15px;
+  border: 0;
+  border-bottom: 2px solid #4f1ca0;
+  outline: none;
+  background-color: transparent;
+  color: #333;
+  font-size: 20px;
+}
+.addItemForm__input::-webkit-input-placeholder {
+  color: #4f1ca0;
+  font-family: "Roboto";
+}
+.addItemForm__input + .addItemForm__input {
+  margin-top: 20px;
+}
+.addItemForm__submit {
+  min-width: 160px;
+  outline: none;
+  border: 1px solid #4f1ca0;
+  background-color: #4f1ca0;
+  border-radius: 8px;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 20px;
+  cursor: pointer;
 }
