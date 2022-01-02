@@ -9,7 +9,9 @@
             <div class="accordItem__headline">
                 <div class="accordItem__button">+</div>
                 <div class="accordItem__label">{{ $helper->title }}</div>
+                @if (Auth::check() && $role === 'ADMIN')
                 <div class="accordItem__remove js-accordItem-remove">✕</div>
+                @endif
             </div>
             <div class="accordItem__content">
                 <div class="accordItem__text">
