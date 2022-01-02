@@ -7,6 +7,9 @@ accordItems.forEach((item) => {
     });
     const id = item.getAttribute('data-id');
     const remove = item.querySelector('.js-accordItem-remove');
+    if (!remove) {
+        return;
+    }
     remove.addEventListener('click', function(event) {
         event.stopPropagation();
         axios.post('/remove-item', { id })

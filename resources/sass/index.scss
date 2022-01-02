@@ -147,6 +147,9 @@ main {
             color: lightseagreen;
         }
     }
+    &__link {
+        font-size: 20px;
+    }
     & + & {
         margin-top: 20px;
     }

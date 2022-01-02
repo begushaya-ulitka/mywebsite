@@ -3,6 +3,7 @@
 @section('content')
 <section class="section">
     <div class="accords">
+        <!-- helpers list -->
         @if(count($helpers) > 0)
         @foreach($helpers as $helper)
         <div class="accordItem js-accordItem" data-id="{{ $helper->id }}">
@@ -22,6 +23,7 @@
         @endforeach
         @endif
 
+        <!-- admin panel for adding helper item -->
         @if (Auth::check() && $role === 'ADMIN')
         <form class="addItemForm" method="post" action="{{ URL::route('add-item') }}">
             @csrf
@@ -35,6 +37,8 @@
         </form>
         @endif
     </div>
+
+    <!-- link to chat for users -->
     @if (Auth::check() && $role === 'USER')
     <div class="linkPanel">
         <span class="linkPanel__text">
@@ -43,6 +47,8 @@
         </span>
     </div>
     @endif
+
+    <!-- link to adding operators form for admin -->
     @if (Auth::check() && $role === 'ADMIN')
     <div class="linkPanel">
         <span class="linkPanel__text">

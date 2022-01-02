@@ -2345,6 +2345,11 @@ accordItems.forEach(function (item) {
   });
   var id = item.getAttribute('data-id');
   var remove = item.querySelector('.js-accordItem-remove');
+
+  if (!remove) {
+    return;
+  }
+
   remove.addEventListener('click', function (event) {
     event.stopPropagation();
     axios__WEBPACK_IMPORTED_MODULE_0___default().post('/remove-item', {

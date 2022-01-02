@@ -151,6 +151,9 @@ main {
   background-color: #fff;
   color: lightseagreen;
 }
+.accordItem__link {
+  font-size: 20px;
+}
 .accordItem + .accordItem {
   margin-top: 20px;
 }
