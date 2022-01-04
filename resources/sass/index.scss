@@ -46,10 +46,12 @@ main {
         color: $white;
         font-family: 'Roboto-Thin';
         font-size: 20px;
-        margin-left: 10px;
         text-decoration: none;
         &:hover {
             font-style: italic;
+        }
+        & + & {
+            margin-left: 10px;
         }
     }
 }
@@ -79,6 +81,13 @@ main {
 
 .section {
     padding: 20px 0;
+}
+
+.title {
+    color: $nightrider;
+    font-family: 'Roboto-Medium';
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .accords {

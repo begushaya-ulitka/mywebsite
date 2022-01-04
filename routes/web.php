@@ -11,13 +11,8 @@ Route::get('/', [IndexController::class, 'showIndex'])->name('index');
 Route::post('/add-item', [IndexController::class, 'addItem'])->name('add-item');
 Route::post('/remove-item', [IndexController::class, 'removeItem'])->name('remove-item');
 
-Route::get('/signup', ['as' => 'signup.form', function () {
-	return view('signup');
-}]);
-
-Route::get('/signin', ['as' => 'signin.form', function () {
-	return view('signin');
-}]);
+Route::get('/signup', [RegisterController::class, 'showSignup'])->name('signup.form');
+Route::get('/signin', [LoginController::class, 'showSignin'])->name('signin.form');
 
 Route::post('/signup', [RegisterController::class, 'save'])->name('signup');
 Route::post('/signin', [LoginController::class, 'postLogin'])->name('signin');

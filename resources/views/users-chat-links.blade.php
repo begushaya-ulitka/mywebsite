@@ -4,6 +4,7 @@
 <section class="section">
     <!-- users chats for operators -->
     @if(count($users) > 0)
+    <div class="title">Список пользователей</div>
     @foreach($users as $user)
     <div class="accordItem js-accordItem">
         <div class="accordItem__headline">
@@ -20,6 +21,8 @@
         </div>
     </div>
     @endforeach
+    @else
+    <div class="title">Список пользователей пуст</div>
     @endif
 </section>
 @stop

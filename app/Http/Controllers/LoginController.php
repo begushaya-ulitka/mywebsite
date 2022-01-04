@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    public function showSignin(Request $request) {
+        return view('signin');
+    }
+
     public function postLogin(Request $request) {
         $credentials = $request->validate([
             'email' => ['required', 'email'],

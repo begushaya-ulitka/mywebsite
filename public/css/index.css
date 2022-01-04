@@ -38,11 +38,13 @@ main {
   color: #fff;
   font-family: "Roboto-Thin";
   font-size: 20px;
-  margin-left: 10px;
   text-decoration: none;
 }
 .header__link:hover {
   font-style: italic;
+}
+.header__link + .header__link {
+  margin-left: 10px;
 }
 
 .footer {
@@ -70,6 +72,13 @@ main {
 
 .section {
   padding: 20px 0;
+}
+
+.title {
+  color: #333;
+  font-family: "Roboto-Medium";
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
 .accords {
