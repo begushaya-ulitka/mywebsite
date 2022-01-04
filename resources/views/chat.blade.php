@@ -12,11 +12,27 @@
             @endforeach
             @endif
         </div>
-        <form class="chatForm" method="post" action="{{ URL::route('send-message') }}">
+        @if (Auth::check() && $role === 'OPERATOR')
+        <form 
+            class="chatForm" 
+            method="post"
+            action="{{ URL::route('send-answer', $userId) }}"
+        >
             @csrf
             <input class="chatForm__input js-message-input" name="text" type="text">
             <button class="chatForm__button js-send-message" disabled type="submit">Отправить</button>
         </form>
+        @else
+        <form 
+            class="chatForm" 
+            method="post" 
+            action="{{ URL::route('send-message') }}"
+        >
+            @csrf
+            <input class="chatForm__input js-message-input" name="text" type="text">
+            <button class="chatForm__button js-send-message" disabled type="submit">Отправить</button>
+        </form>
+        @endif
     </div>
 </section>
 @stop

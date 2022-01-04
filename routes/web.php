@@ -27,4 +27,6 @@ Route::get('/admin-form', [UserController::class, 'showAdminForm'])->name('admin
 Route::post('/create-operator', [UserController::class, 'createOperator'])->name('create-operator');
 
 Route::get('/chat', [ChatController::class, 'showChat'])->name('chat.form');
+Route::get('/chat/{id}', [ChatController::class, 'showChatForAnswer'])->name('chat.answer.form');
 Route::post('/send-message', [ChatController::class, 'sendMessage'])->name('send-message');
+Route::post('/send-answer/{id}', [ChatController::class, 'sendAnswer'])->name('send-answer');

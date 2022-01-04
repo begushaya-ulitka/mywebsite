@@ -12,7 +12,10 @@
         </div>
         <div class="accordItem__content">
             <div class="accordItem__text">
-                <a class="accordItem__link" href="">Перейти в чат</a>
+                <a 
+                    class="accordItem__link" 
+                    href="{{ URL::route('chat.answer.form', ['id' => $user->id]) }}"
+                >Перейти в чат</a>
             </div>
         </div>
     </div>

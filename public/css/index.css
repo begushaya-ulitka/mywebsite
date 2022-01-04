@@ -280,6 +280,7 @@ main {
   min-height: 350px;
   max-height: 350px;
   overflow-x: hidden;
+  background-color: #fff;
 }
 .chatMessage {
   padding: 20px;

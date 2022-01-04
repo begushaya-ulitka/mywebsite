@@ -13,7 +13,7 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__title">
-				<a class="header__link" href="/">Сайт поддержки</a>
+				<a class="header__link" href="{{ URL::route('index') }}">Сайт поддержки</a>
 			</div>
 			<div class="header__auth">
 				@if (Auth::check())
