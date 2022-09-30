@@ -13,7 +13,7 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__title">
-				<a class="header__link" href="{{ URL::route('index') }}">Сайт поддержки</a>
+				<a class="header__link" href="{{ URL::route('index') }}">Center of support</a>
 			</div>
 			<div class="header__auth">
 				@if (Auth::check())
@@ -39,7 +39,7 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__text">
-				Программная Инжерения. 2021. Декабрь. Тут могла быть ваша реклама.
+				Здесь могла быть ваша реклама.
 			</div>
 		</footer>
 	</div>

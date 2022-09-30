@@ -30,6 +30,9 @@
         >
             @csrf
             <input class="chatForm__input js-message-input" name="text" type="text">
+            <button class="chatForm__file" disabled>
+                <img src="https://img.icons8.com/ios/50/000000/file--v1.png"/>
+            </button>
             <button class="chatForm__button js-send-message" disabled type="submit">Отправить</button>
         </form>
         @endif

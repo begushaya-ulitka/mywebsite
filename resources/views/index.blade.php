@@ -28,8 +28,8 @@
         <form class="addItemForm" method="post" action="{{ URL::route('add-item') }}">
             @csrf
             <div class="addItemForm__fields">
-                <input class="addItemForm__input" name="title" type="text" placeholder="Заголовок">
-                <input class="addItemForm__input" name="text" type="text" placeholder="Текст">
+                <input class="addItemForm__input" name="title" type="text" placeholder="Вопрос">
+                <input class="addItemForm__input" name="text" type="text" placeholder="Ответ">
             </div>
             <button class="addItemForm__submit" type="submit">
                 <span>Добавить</span>
@@ -52,8 +52,7 @@
     @if (Auth::check() && $role === 'ADMIN')
     <div class="linkPanel">
         <span class="linkPanel__text">
-            Товарищ админ, не хотите ли
-            <a class="linkPanel__link" href="{{ URL::route('admin.form') }}">добавить оператора</a>
+            <a class="linkPanel__link" href="{{ URL::route('admin.form') }}">Зарегистрировать нового оператора</a>
         </span>
     </div>
     @endif

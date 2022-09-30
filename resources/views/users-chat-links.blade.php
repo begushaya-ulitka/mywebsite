@@ -9,7 +9,7 @@
     <div class="accordItem js-accordItem">
         <div class="accordItem__headline">
             <div class="accordItem__button">+</div>
-            <div class="accordItem__label">{{ $user->name }} (id: {{ $user->id }})</div>
+            <div class="accordItem__label">{{ $user->name }} (Email: {{ $user->email }})</div>
         </div>
         <div class="accordItem__content">
             <div class="accordItem__text">
